@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  background: #111;
+  color: #eee;
+  min-height: 100vh;
+  transition: background 0.2s, color 0.2s;
+}
+body.light {
+  background: #fff;
+  color: #222;
+}
+header, footer {
+  padding: 1em;
+  text-align: center;
+}
+header {
+  border-bottom: 1px solid #333;
+}
+footer {
+  border-top: 1px solid #333;
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+h1, h2 {
+  margin: 0.5em 0;
+}
+ul#song-list {
+  list-style: none;
+  padding: 0;
+  margin: 2em auto;
+  max-width: 500px;
+}
+ul#song-list li {
+  padding: 0.7em 1em;
+  margin: 0.5em 0;
+  background: #222;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+body.light ul#song-list li {
+  background: #eee;
+}
+ul#song-list li:hover {
+  background: #333;
+}
+body.light ul#song-list li:hover {
+  background: #ddd;
+}
+#transpose-controls {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+}
+button {
+  font-family: inherit;
+  background: #333;
+  color: #eee;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+body.light button {
+  background: #ddd;
+  color: #222;
+}
+button:hover {
+  background: #555;
+}
+body.light button:hover {
+  background: #bbb;
+}
+#song-view {
+  margin: 2em auto;
+  max-width: 600px;
+}
+.lyric-line {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1em;
+  width: 100%;
+}
+.chords-row, .lyrics-row {
+  display: flex;
+  gap: 1em;
+  font-size: 1.15em;
+  width: 100%;
+}
+.chords-row {
+  color: #9fd4ff;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+body.light .chords-row {
+  color: #1565c0;
+}
+.lyrics-row {
+  color: inherit;
+}
+@media (max-width: 700px) {
+  #song-view {
+    max-width: 98vw;
+    font-size: 1em;
+  }
+  ul#song-list {
+    max-width: 99vw;
+  }
+}

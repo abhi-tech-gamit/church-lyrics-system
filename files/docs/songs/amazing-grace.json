@@ -1,0 +1,14 @@
+{
+  "title": "Amazing Grace",
+  "key": "G",
+  "lines": [
+    {
+      "chords": ["G", "C", "G", "D"],
+      "lyrics": ["Amazing", "grace,", "how", "sweet"]
+    },
+    {
+      "chords": ["G", "C", "G"],
+      "lyrics": ["the", "sound", ""]
+    }
+  ]
+}
