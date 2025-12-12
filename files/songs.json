@@ -1,4 +1,5 @@
 [
   { "title": "Amazing Grace", "filename": "amazing-grace.json" },
   { "title": "Way Maker", "filename": "way-maker.json" }
+  { "title": "sample", "filename": "sample.json" }
 ]
