@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>View Song</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/styles.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Song Viewer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dark">
-  <header>
-    <a href="index.html">← All Songs</a>
-    <button id="theme-toggle">Light Mode</button>
-  </header>
-  <main>
-    <h2 id="song-title"></h2>
-    <div id="transpose-controls">
-      <button id="transpose-down">-1</button>
-      <span>Transpose</span>
-      <button id="transpose-up">+1</button>
-    </div>
-    <div id="song-view"></div>
-  </main>
-  <footer>
-    <small>Offline & Git-Friendly</small>
-  </footer>
-  <script src="js/app.js"></script>
-  <script>
-    loadViewer();
-  </script>
+<body>
+  <div class="viewer-root fade-up">
+    <header class="viewer-header">
+      <a href="index.html" class="back">← Back</a>
+      <div id="song-title" class="viewer-title">Loading…</div>
+      <div style="margin-left:auto; display:flex; gap:8px; align-items:center;">
+        <button id="transpose-down" class="small-btn" title="Transpose down">-</button>
+        <button id="transpose-up" class="small-btn" title="Transpose up">+</button>
+        <button id="theme-toggle" class="small-btn">Dark Mode</button>
+      </div>
+    </header>
+
+    <main id="song-view" class="song-view" aria-live="polite">
+      <!-- Lyrics + chords will render here -->
+    </main>
+
+    <footer class="footer muted">
+      Use + / - to transpose. Press <kbd>/</kbd> to focus search on index.
+    </footer>
+  </div>
+
+  <script src="app.js" type="module"></script>
 </body>
 </html>
