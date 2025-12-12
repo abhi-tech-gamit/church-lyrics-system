@@ -1,0 +1,16 @@
+{
+  "title": "Sample Song",
+  "key": "C",
+  "lines": [
+    {
+      "chords": [
+        "C",
+        "G"
+      ],
+      "lyrics": [
+        "Hello",
+        "World"
+      ]
+    }
+  ]
+}
